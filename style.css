@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --color-very-dark-blue: hsl(234, 12%, 34%);
+    --color-grayish-blue: hsl(229, 6%, 66%);
+    --color-very-light-gray: hsl(0, 0%, 98%);
+    --color-red: hsl(0, 78%, 62%);
+    --color-cyan: hsl(180, 62%, 55%);
+    --color-orange: hsl(34, 97%, 64%);
+    --color-blue: hsl(212, 86%, 64%);
+    }
+
+body {
+    margin: 0;
+    padding-top: 0.01px;
+    text-align: center;
+    font-size: 15px;
+    background-color: var(--color-very-light-gray);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+}
+
+.header {
+    width: 400px;
+    margin: 0 auto;
+}
+
+.header-title {
+    color: var(--color-very-dark-blue);
+    font-weight: 200;
+    margin-bottom: 0;
+}
+
+.header-subtitle {
+    color: var(--color-very-dark-blue);
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.header-description {
+    color: var(--color-grayish-blue);
+    font-size: .8em;
+    font-weight: 400;
+    margin-top: 5px;
+}
+
+.cards-container {
+    width: 1000px;
+    margin: 30px auto 0;
+    display: grid;
+    grid-template-areas: "left center-top right"
+                        "left center-bot right";
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    width: 300px;
+    height: 230px;
+    padding: 20px 30px;
+    background-color: white;
+    text-align: right;
+    border-radius: 5px;
+    border-top: 5px solid transparent;
+    box-shadow:  0 8px 15px -10px var(--color-grayish-blue);
+}
+
+.card-title {
+    margin: 0;
+    text-align: left;
+    color: var(--color-very-dark-blue);
+}
+
+.card-description {
+    text-align: left;
+    font-size: .8em;
+    font-weight: 400;
+    color: var(--color-grayish-blue);
+}
+
+.card-img {
+    width: 64px;
+    margin-top: 25px;
+}
+
+.left {
+    grid-area: left;
+    border-top-color: var(--color-cyan);
+}
+
+.center-top {
+    grid-area: center-top;
+    border-top-color: var(--color-red);
+}
+
+.center-bot {
+    grid-area: center-bot;
+    border-top-color: var(--color-orange);
+}
+
+
+.right {
+    grid-area: right;
+    border-top-color: var(--color-blue);
+}
+
+
+@media screen and (max-width: 375px) {
+    .header {
+        width: 75vw;
+        font-size: .95em;
+    }
+
+    .cards-container {
+        width: 75vw;
+        grid-template-areas: "left"
+                            "center-top"
+                            "center-bot"
+                            "right";
+        margin-bottom: 20px;
+        margin-top: 70px;
+    }
+
+
+}
